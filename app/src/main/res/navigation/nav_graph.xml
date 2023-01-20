@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.suiunbek.presentation.ui.fragments.singup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.suiunbek.presentation.ui.fragments.userinfo.UserDataFragment"
+        android:label="fragment_user_data"
+        tools:layout="@layout/fragment_user_data" >
+        <action
+            android:id="@+id/action_userDataFragment_to_rickAndMortyFragment"
+            app:destination="@id/rickAndMortyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rickAndMortyFragment"
+        android:name="com.suiunbek.presentation.ui.fragments.rick_and_morty.RickAndMortyFragment"
+        android:label="fragment_rick_and_morty"
+        tools:layout="@layout/fragment_rick_and_morty" />
+</navigation>
